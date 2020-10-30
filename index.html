@@ -35,12 +35,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- =======================================================
-  * Template Name: iPortfolio - v1.4.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
   </head>
 
   <body>
@@ -526,7 +521,7 @@
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
               <form
-                action="forms/contact.php"
+                action="https://formspree.io/f/xwkwblbd"
                 method="POST"
                 role="form"
                 class="php-email-form"
@@ -542,7 +537,6 @@
                       data-rule="minlen:4"
                       data-msg="Please enter at least 4 chars" required
                     />
-                    <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="name">Your Email</label>
@@ -554,7 +548,6 @@
                       data-rule="email"
                       data-msg="Please enter a valid email" required
                     />
-                    <div class="validate"></div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -567,7 +560,6 @@
                     data-rule="minlen:4"
                     data-msg="Please enter at least 8 chars of subject" required
                   />
-                  <div class="validate"></div>
                 </div>
                 <div class="form-group">
                   <label for="name">Message</label>
@@ -578,17 +570,14 @@
                     data-rule="required"
                     data-msg="Please write something for us" required
                   ></textarea>
-                  <div class="validate"></div>
-                </div>
-                <div class="mb-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit" onclick="message()">Send Message</button>
+                  <script>
+                    function message() {
+                      alert("Your message has been sent. Thank you!");
+                    }
+                    </script>
                 </div>
               </form>
             </div>
